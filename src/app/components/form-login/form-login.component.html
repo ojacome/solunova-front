@@ -1,0 +1,58 @@
+<div class="card">
+    <div class="card-body">
+        <h2 class="card-title">Login</h2>
+
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" autocomplete="off">
+            <div class="mb-3">
+                <label for="emailInput" class="form-label">Email </label>
+                <input 
+                type="email" 
+                class="form-control" 
+                id="emailInput"
+                [class.is-invalid]="emailNoValido"
+                formControlName="email"
+                placeholder="name@example.com">
+                <div id="emailInput" class="invalid-feedback">
+                    Escriba un email válido.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="passwordInput" class="form-label">Password</label>
+                <div class="input-group">                    
+                    <input 
+                    [type]="fieldTextType ? 'text' : 'password'"
+                    class="form-control" 
+                    id="passwordInput" 
+                    [class.is-invalid]="passwordNoValido"
+                    formControlName="password"
+                    aria-describedby="basic-addon2"
+                    placeholder="*********">
+                    <span class="input-group-text cursor" id="basic-addon2">
+                        <i class="fa"
+                        [ngClass]="{
+                            'fa-eye': fieldTextType,
+                            'fa-eye-slash': !fieldTextType
+                          }"
+                          (click)="fieldTextType = !fieldTextType">
+                        </i>
+                    </span>
+                    <div id="passwordInput" class="invalid-feedback">
+                        Escriba su contraseña.
+                    </div>
+                </div>                
+            </div>
+            <div class="d-grid">
+                <button 
+                class="btn btn-warning text-uppercase fw-bold text-white" 
+                [disabled]="!loginForm.valid"
+                type="submit">
+                    Ingresar
+                </button>                    
+            </div>
+    
+            <p class="mt-3 fst-italic">¿No tienes cuenta? Regístrate 
+                <a routerLink="/register"> aquí</a>
+            </p>
+        </form>
+    </div>
+</div>
