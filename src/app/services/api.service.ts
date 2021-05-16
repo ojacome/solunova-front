@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { tap } from "rxjs/operators";
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { UserResponse } from '../interfaces/user.interface';
 const base_url= environment.api_url;
 
 @Injectable({
@@ -54,5 +56,10 @@ export class ApiService {
     else {
       this.token = null;
     }    
+  }
+
+  getUser(): Observable<UserResponse>{
+    const headers = { 'x-token' : this.token }
+    return this.http.get<UserResponse>(`${base_url}/users`, { headers} )
   }
 }
