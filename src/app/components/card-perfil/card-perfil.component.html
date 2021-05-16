@@ -1,0 +1,29 @@
+<div class="card bg-blue border-light text-players" *ngIf="user">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-6">
+                <h1 class="text-center">10</h1>
+                <p class="text-center fw-bold">{{user.username | uppercase}}</p>
+                <img class="center" src="assets/img/ecu.png" alt="bandera nacionalidad">                                
+            </div>
+            <div class="col-6">
+                <img class="img-fluid" src="assets/img/avatar.png" alt="avatar player">
+            </div>
+        </div>
+
+        <h3 class="card-title text-players text-center mt-4">
+            {{ user.first_name | uppercase }} {{ user.last_name | uppercase }}
+        </h3>
+                         
+        <div class="row align-items-end mt-5">
+            <div class="col-auto">
+                <small >{{ user.email }}</small>        
+            </div>
+            <div class="col-1 mx-auto">
+                <i class="fa fa-sign-out text-fifa cursor" 
+                (click)="logout()" 
+                title="Cerrar sesión"></i>                
+            </div>
+        </div>
+    </div>
+</div>

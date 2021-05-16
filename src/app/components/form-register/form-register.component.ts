@@ -52,6 +52,10 @@ export class FormRegisterComponent  {
     
     const user = {...this.registerForm.value};    
     this.loading = true;
-    this.api.register(user).subscribe();
+    this.api.register(user)
+    .subscribe( 
+      () => this.loading = false, 
+      () => this.loading = false 
+    );
   }
 }
