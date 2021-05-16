@@ -1,78 +1,78 @@
-<div class="card">
+<div class="card text-white bg-transparent" style="border: none;">
     <div class="card-body">
-        <h2 class="card-title">Regístrate</h2>
+        <h2 class="card-title text-uppercase text-players pb-3">Regístrate</h2>
 
         <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" autocomplete="off">
-            <div class="mb-3">
-                <label for="nameInput" class="form-label">Nombre </label>
+            <div class="form-floating mb-2">
                 <input 
                 type="email" 
-                class="form-control" 
+                class="form-control  text-white bg-transparent" 
                 id="nameInput"
                 [class.is-invalid]="first_nameNoValido"
                 formControlName="first_name"
                 placeholder="nombre">
+                <label for="nameInput">Nombre </label>
                 <div id="nameInput" class="invalid-feedback">
                     El nombre es requerido.
                 </div>
             </div>
-            <div class="mb-3">
-                <label for="apellidoInput" class="form-label">Apellido </label>
+            <div class="form-floating mb-2">
                 <input 
                 type="email" 
-                class="form-control" 
+                class="form-control text-white bg-transparent" 
                 id="apellidoInput"
                 [class.is-invalid]="last_nameNoValido"
                 formControlName="last_name"
                 placeholder="apellido">
+                <label for="apellidoInput" >Apellido </label>
                 <div id="apellidoInput" class="invalid-feedback">
                     El apellido es requerido.
                 </div>
             </div>
-            <div class="mb-3">
-                <label for="usernameInput" class="form-label">Username </label>
+            <div class="form-floating mb-2">
                 <input 
                 type="email" 
-                class="form-control" 
+                class="form-control text-white bg-transparent" 
                 id="usernameInput"
                 [class.is-invalid]="usernameNoValido"
                 formControlName="username"
                 placeholder="username">
+                <label for="usernameInput" >Username </label>
                 <div id="usernameInput" class="invalid-feedback">
                     El username es requerido.
                 </div>
             </div>
-            <div class="mb-3">
-                <label for="emailInput" class="form-label">Email </label>
+            <div class="form-floating mb-2">
                 <input 
                 type="email" 
-                class="form-control" 
+                class="form-control text-white bg-transparent" 
                 id="emailInput"
                 [class.is-invalid]="emailNoValido"
                 formControlName="email"
                 placeholder="name@example.com">
+                <label for="emailInput" >Email </label>
                 <div id="emailInput" class="invalid-feedback">
                     Escriba un email válido.
                 </div>
             </div>
-            <div class="mb-3">
-                <label for="passwordInput" class="form-label">Password</label>
-                <div class="input-group">                    
+            <div class=" mb-2">
+                <div class="input-group form-floating">                    
                     <input 
                     [type]="fieldTextType ? 'text' : 'password'"
-                    class="form-control" 
+                    class="form-control text-white bg-transparent" 
                     id="passwordInput" 
                     [class.is-invalid]="passwordNoValido"
                     formControlName="password"
                     aria-describedby="basic-addon2"
                     placeholder="*********">
-                    <span class="input-group-text cursor" id="basic-addon2">
+                    <label for="passwordInput" >Password</label>
+                    <span class="input-group-text bg-fifa cursor" id="basic-addon2">
                         <i class="fa"
                         [ngClass]="{
                             'fa-eye': fieldTextType,
                             'fa-eye-slash': !fieldTextType
-                          }"
-                          (click)="fieldTextType = !fieldTextType">
+                        }"
+                        (click)="fieldTextType = !fieldTextType">
                         </i>
                     </span>
                     <div id="passwordInput" class="invalid-feedback">
@@ -82,7 +82,7 @@
             </div>
             <div class="d-grid">
                 <button 
-                class="btn btn-warning text-uppercase fw-bold text-white" 
+                class="btn bg-fifa text-uppercase fw-bold text-white" 
                 [disabled]="!registerForm.valid"
                 type="submit">
                     Registrar
