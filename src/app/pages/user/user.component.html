@@ -1,1 +1,17 @@
-<p>user works!</p>
+<div class="row" *ngIf="user">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">Datos del jugador</h2>
+                        
+                <h4>Nombre: <span class="fs-5">{{ user.first_name }}</span></h4>
+                <h4>Apellido: <span class="fs-5">{{ user.last_name }}</span></h4>
+                <h4>Username: <span class="fs-5">{{ user.username }}</span></h4>
+                <h4>Email: <span class="fs-5">{{ user.email }}</span></h4>
+
+                <button class="btn btn-primary" (click)="logout()">Logout</button>
+            </div>
+        </div>
+        
+    </div>
+</div>
