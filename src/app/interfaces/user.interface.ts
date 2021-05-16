@@ -9,5 +9,5 @@ export interface User {
     last_name:  string,
     password:   string,
     username:   string,
-    _id:        string
+    _id?:       string
 }
