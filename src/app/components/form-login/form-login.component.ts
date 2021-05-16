@@ -11,6 +11,8 @@ export class FormLoginComponent {
 
   loginForm: FormGroup;
   fieldTextType = false;
+  loading = false;
+
 
 
   constructor(
@@ -38,7 +40,12 @@ export class FormLoginComponent {
   onSubmit(){
     
     const { email, password } = this.loginForm.value;
+    this.loading = true;
 
-    this.api.login(email, password).subscribe();
+    this.api.login(email, password)
+    .subscribe( 
+      () => this.loading = false,
+      () => this.loading = false 
+    );
   }
 }

@@ -4,13 +4,15 @@ import { FormLoginComponent } from './form-login/form-login.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormRegisterComponent } from './form-register/form-register.component';
+import { CardPerfilComponent } from './card-perfil/card-perfil.component';
 
 
 
 @NgModule({
   declarations: [
     FormLoginComponent,
-    FormRegisterComponent
+    FormRegisterComponent,
+    CardPerfilComponent
   ],
   imports: [
     CommonModule,
@@ -20,7 +22,8 @@ import { FormRegisterComponent } from './form-register/form-register.component';
   ],
   exports: [
     FormLoginComponent,
-    FormRegisterComponent
+    FormRegisterComponent,
+    CardPerfilComponent
   ]
 })
 export class ComponentsModule { }
