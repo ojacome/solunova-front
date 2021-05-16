@@ -12,7 +12,7 @@ export class UserComponent  {
 
   user: User;
 
-  
+
 
   constructor(
     private apiSvc: ApiService
@@ -24,5 +24,9 @@ export class UserComponent  {
   getUser(){
     this.apiSvc.getUser()
     .subscribe( res => this.user = res.user )
+  }
+
+  logout(){
+    this.apiSvc.logout();
   }
 }
