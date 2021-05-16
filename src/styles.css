@@ -2,3 +2,33 @@
 .cursor{
     cursor: pointer;
 }
+
+.bg-fifa{
+    background-color: #7f43f1;
+}
+
+.vertical-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100hv;    
+}
+
+.invalid-feedback{
+    color: #f3a1a9;
+}
+
+
+.text-fifa{
+    color: #1ef4c8;
+}
+
+.w-90{
+    width: 90%;
+}
+.w-80{
+    width: 80%;
+}
+.w-70{
+    width: 70%;
+}
