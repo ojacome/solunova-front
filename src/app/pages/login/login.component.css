@@ -1,0 +1,19 @@
+.hero-login{
+    background-image: url("/assets/img/login_fifa.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+      
+    .bg-fifa{
+        background-color: none;
+        background-image: url("/assets/img/campq.jpg");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}

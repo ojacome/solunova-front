@@ -1,1 +1,94 @@
 /* You can add global styles to this file, and also import other style files */
+
+.cursor{
+    cursor: pointer;
+}
+
+.bg-fifa{
+    background-color: #7f43f1;
+}
+
+.bg-blue{
+    background-color: #05053d;
+}
+
+.bg-blue-nice{
+    background-color: #24d6b1;
+}
+
+.section{
+    height: 100vh;  
+    width: 100%;
+    margin: 0;
+  }
+
+.vertical-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100hv;    
+}
+
+.invalid-feedback{
+    color: #f3a1a9;
+}
+
+
+.text-fifa{
+    color: #1ef4c8;
+}
+
+.text-players{
+    color: #7f43f1;
+}
+
+.w-90{
+    width: 90%;
+}
+.w-80{
+    width: 80%;
+}
+.w-70{
+    width: 70%;
+}
+
+.fadeIn {       
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+

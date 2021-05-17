@@ -1,0 +1,15 @@
+.hero-perfil{
+    background-image: url("/assets/img/campeonato.png");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+      
+    .hero-perfil{
+        background-image: url("/assets/img/camp1.jpg");
+        
+    }
+}
