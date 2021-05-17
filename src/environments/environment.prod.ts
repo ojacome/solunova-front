@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  api_url: 'http://localhost:3900/api'
+  api_url: 'https://fifa-ng.herokuapp.com/api'
 };
